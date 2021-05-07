@@ -8,7 +8,7 @@ Created on Tue Oct  6 11:50:44 2020
 
 import os                
 import numpy as np
-
+import random
            
 N = 64
 intervel = 64
@@ -29,13 +29,13 @@ labelDict = ["helical 1_50hz_High_1", "helical 1_50hz_High_2",
              "spur 7_50hz_High_1", "spur 7_50hz_High_2",
              "spur 8_50hz_High_1", "spur 8_50hz_High_2"]
 
-selectList = range(0, 14)
+selectList = random.sample(range(0, 28), 14)
 
 
-dataFolder = '/home/zhi/projects/faultDiagnosis/phm/PHM_Society_2009_Competition_Expanded_txt/50Hz_High'
+dataFolder = './phm/PHM_Society_2009_Competition_Expanded_txt/50Hz_High'
 dataFolderList = sorted(os.listdir(dataFolder))
 os.chdir(dataFolder)
-distFolder = '/home/zhi/projects/faultDiagnosis/phm/class0_28_50hz_High'
+distFolder = './phm/class0_28_50hz_High'
 os.mkdir(distFolder)
 
 

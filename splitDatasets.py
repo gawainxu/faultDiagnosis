@@ -13,8 +13,8 @@ from random import sample
 seq = range(0, 4200)
 randIdx = sample(seq, 1000)
 
-dataFolder = '/home/zhi/projects/faultDiagnosis/phm/class0_28_50hz_High/'
-splitFolder = '/home/zhi/projects/faultDiagnosis/phm/class0_28_50hz_High_3200_end/'
+dataFolder = './phm/class0_28_50hz_High/'
+splitFolder = './phm/class0_28_50hz_High_3200_end/'
 os.mkdir(splitFolder)
 dataList = sorted(os.listdir(dataFolder))
 os.chdir(dataFolder)
